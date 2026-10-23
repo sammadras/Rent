@@ -18,8 +18,10 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      # The runner already has the Android SDK; just accept its licenses so Gradle can
+      # download platform 34 and build-tools by itself.
+      - name: Accept Android SDK licenses
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
