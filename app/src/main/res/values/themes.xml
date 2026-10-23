@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Rent" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FFEDEDED</item>
+        <item name="android:statusBarColor">#FFE4E4E4</item>
+        <item name="android:navigationBarColor">#FFC9C9C9</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
