@@ -140,7 +140,7 @@ class Repository(
             prefs.edit().putString(KEY_LAST_MONTH, now.toString()).apply()
             return
         }
-        var m = last
+        var m: YearMonth = last
         while (m.isBefore(now)) {
             closeMonth(m)
             m = m.plusMonths(1)
